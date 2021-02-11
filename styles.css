@@ -1,0 +1,129 @@
+*, *::before, *::after {
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+    text-align: center;
+    background-color: lightseagreen;
+}
+h1{
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin: 30px;
+    font-family: 'Merienda', cursive;
+    color: white;
+}
+.block{
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translate(0, -10%);
+}
+
+.card{
+    background-color: lightblue;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 30px rgb(61, 59, 59);
+}
+
+
+/* Quote CSS */
+
+#author{
+    width: 40%; 
+    margin-top: 5px;
+    margin-left: auto;
+    color: lightseagreen;
+}
+.quote{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-family: 'Kalam', cursive;
+    color: black;
+    padding: 30px 30px 20px;
+}
+#quoteDisplay{
+    margin: 5px;
+    color: lightseagreen;
+}
+#quoteDisplay::before{
+    content: "\f10d";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-right: 1rem;
+    vertical-align: top;
+}
+
+#quoteDisplay::after{
+    content: "\f10e";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-left: 1rem;
+    vertical-align: top;
+}
+
+
+/* Buttton CSS */
+button{
+    background-color: lightseagreen;
+    border: none;
+    box-shadow: 5px 5px 10px grey;
+    color: white;
+    font-size: 19px;
+    font-family: 'Merienda', cursive;
+    font-weight: 500;
+    margin: 5px 20px 20px;
+    padding: 10px 30px;
+    transition: all .3s;
+    cursor: pointer;
+    outline: none;
+}
+button:hover{
+    box-shadow: 0px 15px 25px -5px rgba(darken(dodgerblue, 40%));
+    transform: scale(1.05);
+}
+button:active{
+    box-shadow: 0px 4px 8px rgba(darken(dodgerblue, 30%));
+    transform: scale(.95);
+}
+
+@media (max-width: 560px) {
+    .block{
+        width: 100%;
+    }
+    .card {
+        padding: 0;
+    }
+    #quoteDisplay::before {
+        font-size: 1rem;
+    }
+    #quoteDisplay::after {
+        font-size: 1rem;
+    }
+    .quote{
+        font-size: 1.3rem;
+    }
+    h1 {
+        font-size: 1.3rem;
+    }
+    button {
+        font-size: 14px;
+    }
+}
